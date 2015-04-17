@@ -1,0 +1,212 @@
+
+<html>
+<head>
+
+<script type="text/javascript">
+
+function viewXML(what)
+{
+	var url = what.url.value;
+	var countEmptyCells=0;
+		if(url=="")
+		{
+			alert("Please enter the filename");
+			return(null);
+		}
+		else
+		{
+			if (window.XMLHttpRequest)
+			{// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp=new XMLHttpRequest();   
+			}
+			else 
+			{// code for IE6, IE5
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+			}
+			xmlhttp.open("GET",url,false);
+			xmlhttp.send();
+			xmlDoc=xmlhttp.responseXML;
+			
+			if(xmlDoc == undefined)
+			{
+				
+			}
+			
+			if(xmlDoc.documentElement.nodeName=="parsererror")
+			{
+				alert("Invalid File.");
+			}
+			else
+			{
+				ELEMENT_NODE = 1;    // MS parser doesn't define Node.ELEMENT_NODE
+				root=xmlDoc.DocumentElement;
+				var regForSpace=new RegExp('^\\s+$','g');
+				html_text="<html><body>";
+           
+				html_text='<table border="1" cellpadding="2"><tr><th>author</th><th>title</th><th>genre</th><th>price</th><th>publish_date</th><th>description</th><th>image</th></tr>';
+				
+				for(j=0;j<xmlDoc.getElementsByTagName("book").length;j++)
+				{
+					var authorflag=0; 
+					var titleflag=0; 
+					var genreflag=0;
+					var priceflag=0;
+					var publish_dateflag=0;
+					var descriptionflag=0;
+					var imageflag=0;
+			
+					if(xmlDoc.getElementsByTagName("author")[j].innerHTML == "")
+					{
+						authorval=' ';
+						authorflag=1;
+					}
+					else if(regForSpace.test(xmlDoc.getElementsByTagName("author")[j].childNodes[0].nodeValue))
+					{	
+						authorval=' ';
+						authorflag=1;
+					}
+					else
+					{						
+						authorval=xmlDoc.getElementsByTagName("author")[j].childNodes[0].nodeValue;
+					}
+					regForSpace=new RegExp('^\\s+$','g');
+			
+			
+					if(xmlDoc.getElementsByTagName("title")[j].innerHTML == "")
+					{
+						titleval=' ';
+						titleflag=1;
+					}
+					else if(regForSpace.test(xmlDoc.getElementsByTagName("title")[j].childNodes[0].nodeValue))
+					{	
+						titleval=' ';
+						titleflag=1;
+					}
+					else
+					{
+
+						titleval=xmlDoc.getElementsByTagName("title")[j].childNodes[0].nodeValue;
+					}
+						regForSpace=new RegExp('^\\s+$','g');			
+			
+					if(xmlDoc.getElementsByTagName("genre")[j].innerHTML == "")
+					{
+						genreval=' ';
+						genreflag=1;
+					}
+					else if(regForSpace.test(xmlDoc.getElementsByTagName("genre")[j].childNodes[0].nodeValue))
+					{	
+						genreval=' ';
+						genreflag=1;
+					}
+					else
+					{
+						
+						genreval=xmlDoc.getElementsByTagName("genre")[j].childNodes[0].nodeValue;
+					}
+					regForSpace=new RegExp('^\\s+$','g');	
+						
+					if(xmlDoc.getElementsByTagName("price")[j].innerHTML == "")
+					{
+						priceval=' ';
+						priceflag=1;
+					}
+					else if(regForSpace.test(xmlDoc.getElementsByTagName("price")[j].childNodes[0].nodeValue))
+					{	
+						priceval=' ';
+						priceflag=1;
+					}
+					else
+					{
+						priceval=xmlDoc.getElementsByTagName("price")[j].childNodes[0].nodeValue;
+					}
+					regForSpace=new RegExp('^\\s+$','g');
+	
+					if(xmlDoc.getElementsByTagName("publish_date")[j].innerHTML == "")
+				{
+					publish_dateval=' ';
+					publish_dateflag=1;
+				}
+			else if(regForSpace.test(xmlDoc.getElementsByTagName("publish_date")[j].childNodes[0].nodeValue))
+			{	
+				publish_dateval=' ';
+				publish_dateflag=1;
+			}
+			else
+			{
+				publish_dateval=xmlDoc.getElementsByTagName("publish_date")[j].childNodes[0].nodeValue;
+			}
+			
+			regForSpace=new RegExp('^\\s+$','g');
+			
+			if(xmlDoc.getElementsByTagName("description")[j].innerHTML == "")
+			{
+				descriptionval=' ';
+				descriptionflag=1;
+			}
+			else if(regForSpace.test(xmlDoc.getElementsByTagName("description")[j].childNodes[0].nodeValue))
+			{	
+				descriptionval=' ';
+				descriptionflag=1;
+			}
+			else
+			{
+				descriptionval=xmlDoc.getElementsByTagName("description")[j].childNodes[0].nodeValue;
+			}
+			regForSpace=new RegExp('^\\s+$','g');
+			
+			
+			if(xmlDoc.getElementsByTagName("image")[j].innerHTML == "")
+			{
+				imageval=' ';
+				imageflag=1;
+			}
+			else if(regForSpace.test(xmlDoc.getElementsByTagName("image")[j].childNodes[0].nodeValue))
+			{	
+				imageval=' ';
+				imageflag=1;
+			}
+			else
+			{
+				imageval=xmlDoc.getElementsByTagName("image")[j].childNodes[0].nodeValue;
+			}
+			regForSpace=new RegExp('^\\s+$','g');
+		
+			if(authorflag==1 && titleflag==1 && genreflag==1 && priceflag==1 && publish_dateflag==1 && descriptionflag==1 && imageflag==1)
+			{	
+				countEmptyCells++;
+				alert(countEmptyCells);
+			}
+			else
+			{
+			   html_text+='<tr><td>'+authorval+'</td><td>'+titleval+'</td><td>'+genreval+'</td><td>'+priceval+'</td><td>'+publish_dateval+'</td><td>'+descriptionval+'</td><td><img src='+imageval+' height=100 width=100></img></td></tr>';	
+			   
+			}
+        }
+				if((xmlDoc.getElementsByTagName("book").length - countEmptyCells) != 0)
+				{
+				  html_text+='</table><noscript></body></html>';
+				  hWin = window.open("", "Assignment4", " scrollbars=1,height=600,width=800");
+				  hWin.document.write(html_text);
+				}
+				
+				else
+				{
+					alert("No Books");
+				}
+		}	
+
+			//hWin.document.close(); 
+  }		
+}
+ </script>
+ </head>
+<body style="text-align: center;>
+ <h2 style="text-align: center;">Enter  url for the Book XML file</h2>
+<form name="myform" method="POST" id="location">
+<input type="text" name="url" maxlength="255" size="60" /> <br />
+<input type="button" name="submit" value="Submit Query" onClick="viewXML(this.form)" />
+</form>
+<noscript>
+</body>
+</html>

@@ -1,0 +1,164 @@
+div#mid
+{
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0;
+	height:664px;
+	background:#6EA3BF;
+}
+
+div#midone
+{
+	position:absolute;
+	width:91.3%;
+	top:92px;
+	left:40px;
+	height:70px;
+	background:#391B0C;
+}
+
+
+div#midtwo
+{
+	position:absolute;
+	border-style:solid;
+	border-width:7px;
+	border-color:#C9B188;
+    width:90%;
+	top:162px;
+	left:40px;
+	height:168px;
+	background:#6EA3BF;
+	font-size:25pt;
+	text-align:right;
+	font-weight:bold;
+	font-family:arial;
+	color:#02547E;
+
+}
+
+
+div#midthree
+{
+	position:absolute;
+	border-style:solid;
+	border-width:7px;
+	border-color:#C9B188;
+    width:90%;
+	top:323px;
+	left:40px;
+	height:155px;
+	background:white;
+}
+
+
+table.firsttable
+{
+	width:97%;
+	border-collapse:collapse;
+}
+
+tr.rowfirsttable
+{
+	background:#C9B188;
+}
+
+td.rowfirst
+{
+	font-family:calibri;
+	font-size:10pt;
+	font-weight:bold;
+	color:#02547E;
+	height:27px;
+	width:30px;
+}
+
+td.rowfirstabout
+{
+	font-family:calibri;
+	font-size:10pt;
+	font-weight:bold;
+	color:#02547E;
+	height:27px;
+	width:45px;
+}
+
+td.rowfirstapp
+{
+	font-family:calibri;
+	font-size:10pt;
+	font-weight:bold;
+	color:#02547E;
+	height:27px;
+	width:110px;
+}
+
+td.rowfirstfee
+{
+	font-family:calibri;
+	font-size:10pt;
+	font-weight:bold;
+	color:#02547E;
+	height:27px;
+	width:120px;
+}
+
+td.rowfirstmul
+{
+	font-family:calibri;
+	font-size:10pt;
+	font-weight:bold;
+	color:#02547E;
+	height:27px;
+	width:40px;
+}
+
+a.country
+{
+	color:#02547E;
+}
+
+a.about
+{
+	text-decoration:none;
+	color:#02547E;
+}
+
+table.secondtable
+{
+	border-collapse:collapse;
+	width:96%;
+}
+
+
+td.rowsecondtable
+{
+	font-family:Arial;
+	font-size:10pt;
+	color:#02547E;
+	height:27px;
+	padding-left:7px;
+}
+
+td.headsecondtable
+{
+	font-family:Arial;
+	font-size:10pt;
+	height:27px;
+	padding-left:7px;
+}
+
+tr.bluerow
+{
+	background:#D9E6EE;
+	border-bottom:2pt solid #02547E;
+	border-top:2pt solid #02547E;
+}
+
+.seminarposition
+{
+	position:relative;
+	top:5px;
+	left:-30px;
+}

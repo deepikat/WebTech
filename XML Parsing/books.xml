@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<catalog>
+
+<book id="bk101">
+	<author>Mangano, Sal</author>
+	<title>XSLT Cookbook</title>
+	<genre>Computer</genre>
+	<price>44.95</price>
+	<publish_date>2000-10-01</publish_date>
+	<description>An in-depth look at creating applications with XSLT</description>
+	<image>XSLT.jpg</image>
+</book>
+
+<book id="bk102">
+<author>Davis, Dee</author>
+<title>Midnight Rain</title>
+<genre>Fantasy</genre>
+<price>5.95</price>
+<publish_date>2004-11-16</publish_date>
+<description>A former architect battles corporate zombies, 
+an evil sorceress, and her own childhood to become queen 
+of the world.</description>
+<image>Midnight.jpg</image>
+</book>
+
+<book id="bk101">
+	<author>Mangano, Sal</author>
+	<title>XSLT Cookbook</title>
+	<genre>Computer</genre>
+	<price>44.95</price>
+	<publish_date>2000-10-01</publish_date>
+	<description>An in-depth look at creating applications with XSLT</description>
+	<image>XSLT.jpg</image>
+</book>
+
+<book id="bk102">
+<author>Davis, Dee</author>
+<title>Midnight Rain</title>
+<genre>Fantasy</genre>
+<price>5.95</price>
+<publish_date>2004-11-16</publish_date>
+<description>A former architect battles corporate zombies, 
+an evil sorceress, and her own childhood to become queen 
+of the world.</description>
+<image>Midnight.jpg</image>
+</book>
+
+<book id="bk101">
+	<author>Mangano, Sal</author>
+	<title>XSLT Cookbook</title>
+	<genre>Computer</genre>
+	<price>44.95</price>
+	<publish_date>2000-10-01</publish_date>
+	<description>An in-depth look at creating applications with XSLT</description>
+	<image>XSLT.jpg</image>
+</book>
+
+<book id="bk102">
+<author>Davis, Dee</author>
+<title>Midnight Rain</title>
+<genre>Fantasy</genre>
+<price>5.95</price>
+<publish_date>2004-11-16</publish_date>
+<description>A former architect battles corporate zombies, 
+an evil sorceress, and her own childhood to become queen 
+of the world.</description>
+<image>Midnight.jpg</image>
+</book>
+
+
+
+</catalog>

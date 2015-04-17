@@ -1,0 +1,294 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android1:gravity="center_horizontal"
+    android1:orientation="vertical"
+    tools:context=".MainScreen" >
+
+    <EditText
+        android1:id="@+id/editText1"
+        android1:layout_width="130dp"
+        android1:layout_height="40dp"
+        android1:layout_alignParentLeft="true"
+        android1:layout_alignParentTop="true"
+        android1:layout_marginLeft="0dp"
+        android1:layout_marginTop="0dp"
+        android1:ems="10"
+        android1:hint="@string/zip_or_city"
+        android1:inputType="text" />
+
+    <Button
+        android1:id="@+id/bSearch"
+        android1:layout_width="80dp"
+        android1:layout_height="45dp"
+        android1:layout_alignParentRight="true"
+        android1:layout_alignTop="@+id/editText1"
+        android1:layout_marginRight="0dp"
+        android1:layout_marginTop="0dp"
+        android1:text="@string/searchbutton" />
+
+    <TableLayout
+        android1:id="@+id/RHE"
+        android1:layout_width="300dp"
+        android1:layout_height="140dp"
+        android1:layout_centerInParent="true"
+        android1:layout_marginTop="18dp"
+        android1:gravity="center"
+        android1:padding="5dp" >
+
+        <TableRow android1:layout_height="wrap_content" >
+
+            <TextView
+                android1:id="@+id/day"
+                android1:layout_width="55dp"
+                android:gravity="center"
+                android1:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_gravity="top" />
+
+            <TextView
+                android1:id="@+id/weather"
+                android:gravity="center"
+                android1:layout_width="120dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/high"
+                android:gravity="center"
+                android1:layout_width="55dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/low"
+                android:gravity="center"
+                android1:layout_width="55dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/display_row1"
+            android1:layout_height="wrap_content" >
+
+            <TextView
+                android1:id="@+id/day1"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/weather1"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/high1"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/low1"
+                android:gravity="center"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow android1:layout_height="wrap_content" >
+
+            <TextView
+                android1:id="@+id/day2"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/weather2"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/high2"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/low2"
+                android:gravity="center"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow 
+            android:id="@+id/display_row2"
+            android1:layout_height="wrap_content" >
+
+            <TextView
+                android1:id="@+id/day3"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/weather3"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/high3"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/low3"
+                android:gravity="center"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow android1:layout_height="wrap_content" >
+
+            <TextView
+                android1:id="@+id/day4"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/weather4"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/high4"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/low4"
+                android:gravity="center"
+                android:layout_marginBottom="1dp"
+                android1:layout_height="wrap_content" />
+        </TableRow>
+        
+        <TableRow android1:layout_height="wrap_content" >
+
+            <TextView
+                android1:id="@+id/day5"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/weather5"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/high5"
+                android:gravity="center"
+                android:layout_marginRight="1dp"
+                android1:layout_height="wrap_content" />
+
+            <TextView
+                android1:id="@+id/low5"
+                android:gravity="center"
+                android1:layout_height="wrap_content" />
+        </TableRow>
+        
+    </TableLayout>
+
+<RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/bSearch"
+        android:layout_toRightOf="@+id/editText1"
+        android:orientation="horizontal"
+        android:paddingLeft="2dp" >
+        <RadioButton
+            android:id="@+id/FRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:color = "#FFFFFFFF"
+            android:text="@string/F" />
+
+        <RadioButton
+            android1:id="@+id/CRadio"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:text="@string/C" />
+
+    </RadioGroup>
+
+<TextView
+    android1:id="@+id/textView1"
+    android:gravity="center"
+    android1:layout_width="140dp"
+    android1:layout_height="40dp"
+    android1:layout_below="@+id/bSearch"
+    android1:layout_centerHorizontal="true" />
+
+<TextView
+    android1:id="@+id/textView2"
+    android:gravity="center"
+    android1:layout_width="170dp"
+    android1:layout_height="20dp"
+    android1:layout_below="@+id/textView1"
+    android1:layout_centerHorizontal="true" />
+
+<TextView
+    android1:id="@+id/textView3"
+    android1:layout_width="180dp"
+    android1:layout_height="wrap_content"
+    android1:layout_below="@+id/RHE"
+    android1:layout_toLeftOf="@+id/textView1"
+    android1:onClick="onClick"
+    android1:clickable="true" />
+
+<TextView
+    android1:id="@+id/textView4"
+    android1:layout_width="wrap_content"
+    android1:layout_height="wrap_content"
+    android1:layout_alignLeft="@+id/textView3"
+    android1:layout_below="@+id/textView3"
+    android1:onClick="onClick"
+    android1:clickable="true" />
+
+
+
+</RelativeLayout>
